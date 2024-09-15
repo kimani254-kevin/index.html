@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Archduke architectural designs</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <!-- Navbar --> 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+    <div>
+    </div>
+    <div class="container" id="navbar">
+      <a class="navbar-brand" href="#">ArchDuke</a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navbarToggler"> <span class="navbar-toggler-icon"></span> </button> 
+     <div class="collapse navbar-collapse" id="navbarContent"> 
+      <ul class="navbar-nav ms-auto">
+       <li class="nav-item"><a class="nav-link" href="#">Home</a></li> 
+       <li class="nav-item"><a class="nav-link" href="#">Services</a></li> 
+       <li class="nav-item"><a class="nav-link" href="#">Doctors</a></li> 
+       <li class="nav-item"><a class="nav-link" href="#">About Us</a></li> 
+       <li class="nav-item"><a id="btn" onclick="showPopup()" class="nav-link btn btn-outline-primary" href="#">Sign Up</a></li> 
+      </ul> 
+     </div> 
+    </div> 
+   </nav>
+    <!-- Hero Section -->
+    <section class="hero text-left">
+      <div class="container2">
+        <div class="row align-items-auto">
+          <div class="col-md-6" id="hero-container">
+            <h2>Welcome to Archduke designs</h2>
+            <p>
+             <span>Archduke</span> designs is where visionary architecture meets unparalleled craftsmanship. We specialize in designing and building innovative structures that blend form, function, and sustainability. 
+            </p>
+            <form class="form-inline justify-content-left mb-3" id="pic1">
+              <input class="text-box" type="text" class="form-control mr-2" placeholder="Enter your name">
+                        <button id="btn" onclick="showPopup()" type="submit" class="btn btn-dark">Sign Up</button>
+            </form>
+            <div class="book-play">
+              <a href="#" id="btn" onclick="showPopup()" class="btn btn-primary mr-2">Book Now</a>
+              <a href="#" id="btn" onclick="showPopup()" class="btn btn-secondary" id="playButton">Play Video</a>
+            </div>
+
+          </div>
+          <div class="video-container">
+            <img src="thumbnails/profile.jpg" alt="Video Thumbnail" id="thumbnail1" id="videoThumbnail">
+            <video id="video" width="600" controls style="display: none;">
+                <source src="thumbnails/project-vid.mp4" type="video/mp4">
+            </video>
+        </div>
+        </div>
+      </div>
+    </section>
+    <!-- Stats Section-->
+    <div class="container stats-section" id="stats">
+      <div class="row2">
+        <div class="col-md-3 col-sm-6 stat-box">
+          <div class="stat-number" id="counter1">95+</div>
+          <div>Engineers</div>
+        </div>
+        <div class="col-md-3 col-sm-6 stat-box">
+          <div class="stat-number" id="counter1">1500+</div>
+          <div>Bridges</div>
+        </div>
+        <div class="col-md-3 col-sm-6 stat-box">
+          <div class="stat-number" id="counter1">3,000+</div>
+          <div>Apartments</div>
+        </div>
+        <div class="col-md-3 col-sm-6 stat-box">
+          <div class="stat-number" id="counter1">100+</div>
+          <div>Awards</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services-section">
+      <div id="container">
+        <h2 class="text-center">Our Best Services</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-2 col-md-4 col-sm-6 service" id="imager">
+            <div class="img-placeholder1">
+              <img
+                class="img1"
+                src="thumbnails/profile.jpg"
+                alt="specialist"
+              />
+            </div>
+            <p>All Specialist</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 service" id="imager">
+            <div class="img-placeholder2"></div>
+            <img src="thumbnails/private-secure.jpg" />
+            <p>Private & Secure</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 service" id="imager">
+            <div class="img-placeholder6">
+                <img src="thumbnails/ai-generated-8764343_1280.jpg" alt="">
+            </div>
+            <p>Million Customers</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 service" id="imager">
+            <div class="img-placeholder3">
+                <img src="thumbnails/chatbot.jpg" alt="">
+            </div>
+            <p>Chatbot Support</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 service" id="imager">
+            <div class="img-placeholder4">
+                <img src="thumbnails/online-care.jpg" alt="">
+            </div>
+            <p>Online Care</p>
+          </div>
+          <div class="col-lg-2 col-md-4 col-sm-6 service" id="imager">
+            <div class="img-placeholder5">
+                <img src="thumbnails/24hrs.jpg" alt="">
+            </div>
+            <p>24/7 Service</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Engineers Section -->
+    <section class="doctors-section">
+      <div class="container">
+        <h2 class="text-center">Our Best Engineers</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-6 doctor" id="imager2">
+            <div class="img-placeholder" id="imager2">
+              <img id="placeholder6" src="thumbnails/eng.John.jpg" alt="">
+            </div>
+            <p>Eng. Sarah (Ph.D)</p>
+          </div>
+          <div class="col-lg-3 col-md-6 doctor">
+            <div class="img-placeholder">
+              <img id="placeholder6" src="thumbnails/eng.bento.jpg" alt="">
+            </div>
+            <p>Eng. John (Ph.D)</p>
+          </div>
+          <div class="col-lg-3 col-md-6 doctor">
+            <div class="img-placeholder">
+              <img id="placeholder6" src="thumbnails/eng.mohammed ali.jpg" alt="">
+            </div>
+            <p>Eng.Santos (Ph.D)</p>
+          </div>
+          <div class="col-lg-3 col-md-6 doctor">
+            <div class="img-placeholder">
+              <img id="placeholder6" src="thumbnails/eng.mathiokore.jpg" alt="">
+            </div>
+            <p>Eng.Fanklin (Ph.D)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Steps Section -->
+    <section class="steps-section">
+      <div class="container">
+        <h2 class="text-center">Easy Steps And Get Your Solution</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-3 col-md-6 step">
+            <div class="img-placeholder">
+              <img id="placeholder6" src="thumbnails/profile.jpg" alt="">
+            </div>
+            <p>Check Service Profile</p>
+          </div>
+          <div class="col-lg-3 col-md-6 step">
+            <div class="img-placeholder">
+              <img id="placeholder6" src="thumbnails/consultation.jpg" alt="">
+            </div>
+            <p>Consultation</p>
+          </div>
+          <div class="col-lg-3 col-md-6 step">
+            <div class="img-placeholder">
+              <img id="placeholder6" src="thumbnails/structural-plan.jpg" alt="">
+            </div>
+            <p>Structure Plan Consultation</p>
+          </div>
+          <div class="col-lg-3 col-md-6 step">
+            <div class="img-placeholder">
+              <img id="placeholder6" src="thumbnails/solution.jpg" alt="">
+            </div>
+            <p>Get Your Solution</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+      <div class="container">
+        <h2 class="text-center">What People Say About Us</h2>
+        <div class="row6">
+          <div class="col-md-6 testimonial">
+            <div class="img-placeholder">
+              <img id="placeholder6" src="thumbnails/review3.jpg" alt="">
+            </div>
+            <p>Phillip Martins</p>
+            <p>Thumbs up for the developer and  founder of ArchDuke designs.</p>
+          </div>
+          <div class="col-md-6 testimonial">
+            <div class="img-placeholder">
+              <img id="placeholder6" src="thumbnails/review1.jpg" alt="">
+            </div>
+            <p>Emilia Cage</p>
+            <p>construction made easy and resources availed at your finger tip.All thanks to ArchDUke designs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Register Section -->
+    <section class="register-section text-center">
+      <div class="container">
+        <h2>Want to Register Easily?</h2>
+        <button id="btn" onclick="showPopup()" class="btn btn-primary">Submit Now</button>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container3">
+        <h2>ArchDuke</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Services</a></li>
+              <li><a href="#" class="text-white">Terms of Use</a></li>
+              <li><a href="#" class="text-white">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Facebook</a></li>
+              <li><a href="#" class="text-white">Twitter</a></li>
+              <li><a href="#" class="text-white">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-white">Login</a></li>
+              <li><a href="#" class="text-white">Register</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
